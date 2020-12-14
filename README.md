@@ -6,7 +6,7 @@ To route the micro-frontends you can do it on client-side or server-side. On thi
 
 When you start the project you will see an angular app. From the main menu, if you click on React of Vue tap, the specific micro-frontend will be loaded (react app or vue app). Each app contains an internal menu that use the framework routing navigation. Just when you go to other micro-frontend the orchestrator is called.
 
-![alt text](https://github.com/yduartep/demo-v-microfronted-html-entrypoint/blob/main/micro-frontend-vertical-demo.gif)
+![Micro-frontend Demo](https://github.com/yduartep/demo-v-microfronted-html-entrypoint/blob/master/micro-frontend-vertical-demo.gif)
 
 ## START
 
