@@ -1,0 +1,34 @@
+{
+  "name": "mainapp",
+  "version": "1.0.0",
+  "description": "Demo that serve a Single Page Application that load micro frontends based on browser routes",
+  "main": "server.js",
+  "scripts": {
+    "install:angular": "cd ./angular-app && npm run-script install:app",
+    "install:react": "cd ./react-app && npm run-script install:app",
+    "install:vue": "cd ./vue-app && npm run-script install:app",
+    "install:orchestrator": "cd ./orchestrator && npm run-script install:app",
+    "install:app": "npm run install:react && npm run install:vue && npm run install:angular && npm run install:orchestrator && npm install",
+    "prestart": "npm run build",
+    "start": "node ./server.js",
+    "serve:orchestrator": "cd ./orchestrator && npm run-script start",
+    "serve:react": "cd ./react-app && npm run-script start",
+    "serve:angular": "cd ./angular-app && npm run-script start",
+    "serve:vue": "cd ./vue-app && npm run-script start",
+    "build:orchestrator": "cd ./orchestrator && npm run-script build",
+    "build:react": "cd ./react-app && REACT_APP_MICRO_FRONTEND=true PUBLIC_URL=/public/react/ npm run-script build",
+    "build:angular": "cd ./angular-app && npm run-script build",
+    "build:vue": "cd ./vue-app && NODE_ENV=microfrontend npm run-script build",
+    "prebuild": "npm run install:app",
+    "build": "npm run build:react && npm run build:vue && npm run build:angular && npm run build:orchestrator"
+  },
+  "keywords": [
+    "express",
+    "spa"
+  ],
+  "author": "Yahima Duarte",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

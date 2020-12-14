@@ -1,0 +1,24 @@
+{
+  "name": "orchestrator",
+  "version": "1.0.0",
+  "description": "Orchestrator that load correct Micro Frontend based on route",
+  "main": "index.js",
+  "scripts": {
+    "install:app": "npm i",
+    "start": "parcel index.html --port 3000",
+    "build": "parcel build index.html",
+    "build:watch": "parcel watch index.html"
+  },
+  "keywords": [
+    "orchestrator",
+    "routing",
+    "micro-frontend",
+    "client-routing"
+  ],
+  "author": "Yahima Duarte",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
